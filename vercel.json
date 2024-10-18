@@ -1,14 +1,15 @@
 ﻿{
+{
   "builds": [
     {
-      "src": "main.py", // Change this to your main Flask file name
+      "src": "main.py",  // Ensure this points to your main Flask file
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "main.py" // Change this to your main Flask file name
+      "dest": "main.py"  // Ensure this points to your main Flask file
     }
   ]
 }
