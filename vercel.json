@@ -1,15 +1,19 @@
-﻿{
 {
+  "version": 2,
   "builds": [
     {
-      "src": "main.py",  // Ensure this points to your main Flask file
+      "src": "app.py",  // Replace with the name of your main Flask file
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "main.py"  // Ensure this points to your main Flask file
+      "dest": "app.py"  // Route all requests to your main Flask file
     }
-  ]
+  ],
+  "env": {
+    "OPENAI_API_KEY": "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",  // Set your OpenAI API key
+    "TELEGRAM_TOKEN": "7928907301:AAFPzsmGhFHeP8y9HWpvcGVTHB1GruBa7rY"  // Set your Telegram bot token
+  }
 }
